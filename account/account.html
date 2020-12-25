@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Account </title>
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="../images/logo.png" alt="logoimg" width="125px">
+                </div>
+                <nav>
+                    <ul id="menuitems">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../product/product.html">Products</a></li>
+                        <li><a href="../product/producydetails.html">ProductDeatils</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+               <a href="../shoppingcart/cart.html"><img src="../images/cart.png" alt="" width="30px" ; height="30px"></a> 
+                <img src="../images/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>       
+    </div>
+
+    <!--account page-->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="../images/image1.png" alt="" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form action="" id="LoginForm">
+                            <input type="text" placeholder="username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button><br>
+                            <a href="">Forget password</a>
+                        </form>
+                        <form action="" id="RegForm">
+                            <input type="text" placeholder="username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Resgister</button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ 
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone</p>
+                    <div class="app-logo">
+                        <img src="../images/play-store.png" alt="">
+                        <img src="../images/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="../images/logo-white.png" alt="">
+                    <p>Our Purpose is to Sustainably Make the Pleasure and
+                        Benefits of Sports Accessible to the Many
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Linkd</h3>
+                    <ul>
+                        <li>coupons</li>
+                        <li>Blog Post </li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram </li>
+                        <li>Twitter</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> Copyright 2020-Ecommerce website</p>
+        </div>
+
+        
+    </div>
+
+    <!---js for toggle menu-->
+    <script>
+        var menuitems = document.getElementById("menuitems");
+        menuitems.style.maxHeight = "0px"
+        function menutoggle() {
+            if (menuitems.style.maxHeight = "0px") {
+                menuitems.style.maxHeight = "200px"
+            }
+            else {
+                menuitems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!-- js for toggle menu-->
+    <script>
+        var LoginForm=document.getElementById("LoginForm");
+        var RegForm=document.getElementById("RegForm");
+        var Indicator=document.getElementById("Indicator")
+         
+        function register()
+        {
+            RegForm.style.transform="translateX(0px";
+            LoginForm.style.transform="translateX(0px)"
+            Indicator.style.transform="translateX(100px)"
+        }
+        function login()
+        {
+            RegForm.style.transform="translateX(300px";
+            LoginForm.style.transform="translateX(300px)"
+            Indicator.style.transform="translateX(0px)"
+        }
+
+    </script>
+</body>
+
+</html>
